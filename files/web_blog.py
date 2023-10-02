@@ -1,7 +1,6 @@
 import streamlit as st
 from cv import cv_page
 from projects import projects_page
-from PIL import Image
 from certificates import certificates_page
 
 def blog_gonderilerim():

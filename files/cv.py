@@ -1,5 +1,4 @@
 import streamlit as st
-from PIL import Image
 
 def cv_page():
     st.title("CV Page")

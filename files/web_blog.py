@@ -1,7 +1,8 @@
 import streamlit as st
-
+import os
 from cv import cv_page
 from projects import projects_page
+from PIL import Image
 from certificates import certificates_page
 
 def blog_gonderilerim():
@@ -52,8 +53,7 @@ def baslik():
 
 def profil():
      # Profil kısmı
-   
-    st.sidebar.image("https://github.com/korhansevinc/web_blog_with_streamlit/blob/main/images/profile_image.png", caption="Benim Profil Resmim", use_column_width=True)
+    st.sidebar.image("https://raw.githubusercontent.com/korhansevinc/web_blog_with_streamlit/blob/main/images/profile_image.png", caption="Benim Profil Resmim", use_column_width=True)
     st.sidebar.subheader("Hakkımda")
     st.sidebar.write("Merhaba! Ben  Korhan Sevinç ve bu benim web blogum. TOBB Ekonomi ve Teknoloji Üniversitesinde Bilgisayar Mühendisliği bölümü 3. sınıf öğrencisiyim.")
     st.sidebar.write("Yapay Zeka alaninda arastirma yapmak, muzik dinlemek ve gitar calmak, spor yapmak, bilgisayar oyunları ve LOTR evrenini ilgi alanlarım olarak sayabilirim.")

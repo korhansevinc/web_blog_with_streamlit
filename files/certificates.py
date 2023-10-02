@@ -3,9 +3,8 @@ from PIL import Image
 
 def certificates_page():
     st.title("Certificates Page")
-    st.write("Certificates page içeriği")
     st.title("My Certificates :")
-    cer_image = Image.open("https://github.com/korhansevinc/web_blog_with_streamlit/blob/main/images/cer1.png")
-    cer_image2 = Image.open("https://github.com/korhansevinc/web_blog_with_streamlit/blob/main/images/cer2.png")
-    st.image(cer_image, caption="MERN STACK PROJECT", use_column_width=True)    
-    st.image(cer_image2, caption="JAVA PROGRAMMING", use_column_width=True)    
+    certificate_pic_path_one = "../images/certificates/cer1.png"
+    certificate_pic_path_two = "../images/certificates/cer2.png"
+    st.image(certificate_pic_path_one, caption="Sertifikam 1 ", use_column_width=True)
+    st.image(certificate_pic_path_two, caption="Sertifikam 2", use_column_width=True)

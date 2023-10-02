@@ -1,5 +1,4 @@
 import streamlit as st
-import os
 from cv import cv_page
 from projects import projects_page
 from PIL import Image
@@ -53,7 +52,9 @@ def baslik():
 
 def profil():
      # Profil kısmı
-    st.sidebar.image("https://raw.githubusercontent.com/korhansevinc/web_blog_with_streamlit/blob/main/images/profile_image.png", caption="Benim Profil Resmim", use_column_width=True)
+    proflie_pic_path = "../images/profile/profile_image.png"
+
+    st.sidebar.image(proflie_pic_path, caption="Benim Profil Resmim", use_column_width=True)
     st.sidebar.subheader("Hakkımda")
     st.sidebar.write("Merhaba! Ben  Korhan Sevinç ve bu benim web blogum. TOBB Ekonomi ve Teknoloji Üniversitesinde Bilgisayar Mühendisliği bölümü 3. sınıf öğrencisiyim.")
     st.sidebar.write("Yapay Zeka alaninda arastirma yapmak, muzik dinlemek ve gitar calmak, spor yapmak, bilgisayar oyunları ve LOTR evrenini ilgi alanlarım olarak sayabilirim.")
@@ -62,14 +63,12 @@ def profil():
     st.sidebar.text_input("GitHub Profil Linki", "https://github.com/korhansevinc")
     st.sidebar.text_input("LinkedIn Profil Linki", "https://www.linkedin.com/in/korhan-sevin%C3%A7-97b03a279/")
 
-
-def web_blog_home_page():
-    
+def web_blog_home_page():    
     baslik()
     profil()
     CV_for_sidebar()
     sertifikalarim()
-   
+    blog_gonderilerim()
 
 def pages_with_buttons():
     st.markdown(""" 
@@ -90,10 +89,13 @@ def pages_with_radio():
         web_blog_home_page()
     elif page == "CV":
         cv_page()
+        profil()
     elif page == "Projelerim":
         projects_page()
+        profil()
     elif page == "Sertifikalarim":
         certificates_page()
+        profil()
 
 def main():
     pages_with_radio()

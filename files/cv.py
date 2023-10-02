@@ -5,7 +5,7 @@ def cv_page():
     st.title("CV Page")
     st.write("CV page içeriği")
     st.title("My CV :")
-    cv_image = Image.open("https://github.com/korhansevinc/web_blog_with_streamlit/blob/main/images/cv1.png")
-    cv_image2 = Image.open("https://github.com/korhansevinc/web_blog_with_streamlit/blob/main/images/cv2.png")
-    st.image(cv_image, caption="Korhan Sevinc's CV", use_column_width=True)    
-    st.image(cv_image2, caption="Korhan Sevinc's CV", use_column_width=True)    
+    cv_pic_one = "../images/cv/cv1.png"
+    cv_pic_two = "../images/cv/cv2.png"
+    st.image(cv_pic_one, caption="cv part 1 ", use_column_width=True)
+    st.image(cv_pic_two, caption="cv part 2", use_column_width=True)

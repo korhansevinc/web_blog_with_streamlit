@@ -51,7 +51,7 @@ def baslik():
 
 def profil():
      # Profil kısmı
-    proflie_pic_path = "/images/profile/profile_image.png"
+    proflie_pic_path = "../images/profile/profile_image.png"
 
     st.sidebar.image(proflie_pic_path, caption="Benim Profil Resmim", use_column_width=True)
     st.sidebar.subheader("Hakkımda")
